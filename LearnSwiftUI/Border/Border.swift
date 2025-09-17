@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Border: View {
     var body: some View {
-//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/) 
 //            .padding()
 ////            .border(.red, width: 8)
 ////            .cornerRadius(10)
