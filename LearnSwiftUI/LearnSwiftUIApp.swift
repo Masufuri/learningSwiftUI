@@ -12,22 +12,26 @@ struct LearnSwiftUIApp: App {
     @StateObject var vm = PurchaseViewModel()
     var body: some Scene {
         WindowGroup {
-            
 //            ContentView() //Bai 1
-            TabView {
-                PurchaseView()
-                    .environmentObject(vm)
-                    .tabItem {
-                        Image(systemName: "creditcard")
-                        Text("Purchase")
-                    }
-                PurchaseState()
-                    .environmentObject(vm)
-                    .tabItem {
-                        Image(systemName: "gear")
-                        Text("State")
-                    }
-            }
+            
+            //Bai 9
+//            TabView {
+//                PurchaseView()
+//                    .environmentObject(vm)
+//                    .tabItem {
+//                        Image(systemName: "creditcard")
+//                        Text("Purchase")
+//                    }
+//                PurchaseState()
+//                    .environmentObject(vm)
+//                    .tabItem {
+//                        Image(systemName: "gear")
+//                        Text("State")
+//                    }
+//            }
+            
+            //Bai 10
+            LoginManager()
         }
     }
 }
