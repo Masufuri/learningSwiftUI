@@ -32,7 +32,8 @@ struct LearnSwiftUIApp: App {
             
             //Bai 10
 //            LoginManager()
-            ArcAnimationView()
+//            ArcAnimationView()
+            LabelLabelStyle()
         }
     }
 }
