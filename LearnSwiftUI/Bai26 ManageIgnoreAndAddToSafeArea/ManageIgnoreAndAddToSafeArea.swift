@@ -8,11 +8,45 @@
 import SwiftUI
 
 struct ManageIgnoreAndAddToSafeArea: View {
+    @State private var text: String = ""
+    private var gradientColors: [Color] = [.red, .blue, .yellow, .green]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                backgroundVw
+                ScrollView {
+                    Text("Content")
+                        
+                        .font(.title.weight(.bold))
+                    TextField("Text Field", text: $text)
+                    ForEach(0...15, id: \.self) { item in
+                        Text("\(item)")
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
+                    }
+//                        .padding()
+//                        .background(.white, in: RoundedRectangle(cornerRadius: 8))
+                }
+                .foregroundStyle(.white)
+                .textFieldStyle(.roundedBorder)
+                .padding()
+            }
+            
+            .navigationTitle("Home")
+        }
     }
 }
 
 #Preview {
     ManageIgnoreAndAddToSafeArea()
+}
+
+extension ManageIgnoreAndAddToSafeArea {
+    var backgroundVw: some View {
+        LinearGradient(colors: gradientColors,
+                       startPoint: .top,
+                       endPoint: .bottom)
+        .ignoresSafeArea(.all, edges: .bottom)
+    }
 }

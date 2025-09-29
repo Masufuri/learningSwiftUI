@@ -8,13 +8,31 @@
 import UIKit
 
 class TestView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet var lbCenter: UILabel!
+    
+    var asda: Bool = false {
+        didSet {
+            lbCenter.text = asda.description
+        }
     }
-    */
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        test()
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//        test()
+//    }
+    
+    func test() {
+        self.backgroundColor = .blue
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        lbCenter.text = asda.description
+    }
 
 }

@@ -9,7 +9,14 @@ import SwiftUI
 
 struct TestDivider: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Hello, World!")
+            Divider()
+                .frame(height: 50)
+                .background(.red)
+            Text("What")
+        }
+        .padding()
     }
 }
 
