@@ -11,7 +11,12 @@ struct BuildACheckbox: View {
     @State private var isOn: Bool = false
     var body: some View {
         Group {
-            Toggle("Turn me on?", isOn: $isOn)
+            Toggle(isOn: $isOn) {
+                Text("ádads")
+                Text("gjdfggdfg")
+                Text("dsfsdf")
+                Text("ádsdf")
+            }
             Text(isOn ? "Hello, World!" : "Goodbye, World!")
         }
         Group {
@@ -53,11 +58,22 @@ struct BuildACheckbox: View {
         }
         
         Group {
-            Toggle("", isOn: $isOn)
+            Toggle(isOn: $isOn) {}
                 .labelsHidden()
                 .toggleStyle(.checkBox)
                 .font(.title)
+                .animation(nil)
         }
+        
+        
+        Button {
+            isOn.toggle()
+        } label: {
+            Image(systemName: isOn ? "checkmark.square" : "square")
+        }
+        .tint(.black)
+        .font(.title)
+
     }
 }
 

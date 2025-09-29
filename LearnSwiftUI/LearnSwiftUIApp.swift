@@ -55,7 +55,13 @@ struct LearnSwiftUIApp: App {
 //                    }
 //            }
             
-            TextInput()
+            
+            //bai 20
+//            TextInput()
+            
+            
+            //Bai 26
+            ManageIgnoreAndAddToSafeArea()
         }
     }
 }

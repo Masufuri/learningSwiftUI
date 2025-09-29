@@ -46,10 +46,22 @@ struct LabelLabelStyle: View {
             Label("hello", image: "tasbih_ball_1")
                 .labelStyle(.strongCapsule(color: .green))
                 .labelStyle(.titleOnly)
+            
+            Label {
+                Text("person.fullName")
+                    .font(.body)
+                    .foregroundColor(.primary)
+                Text("person.title")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            } icon: {
+                Text("ád")
+            }
 
         }
     }
 }
+
 
 #Preview {
     LabelLabelStyle()

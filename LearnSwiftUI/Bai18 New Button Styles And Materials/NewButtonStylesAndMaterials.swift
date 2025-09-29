@@ -17,52 +17,49 @@ struct NewButtonStylesAndMaterials: View {
                 .background(.red)
                 .tint(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                
+
                 Button("What is this?") {
-                    
                 }
                 .tint(.red)
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: 8))
                 .controlSize(.large)
             }
-            
+
             VStack(spacing: 16) {
                 Text("Button Style Examples")
-                
-                Button("Button Style Examples") {
-                }
-                .buttonStyle(.borderedProminent)
-                .tint(.mint)
-                .buttonBorderShape(.roundedRectangle(radius: 8))
-                .controlSize(.large)
-                
-                Button("Button Style Examples"){}
+
+                Button("Button Style Examples") {}
+                    .buttonStyle(.borderedProminent)
+                    .tint(.mint)
+                    .buttonBorderShape(.roundedRectangle(radius: 8))
+                    .controlSize(.large)
+
+                Button("Button Style Examples") {}
                     .buttonStyle(.bordered)
                     .tint(.mint)
                     .buttonBorderShape(.roundedRectangle(radius: 8))
                     .controlSize(.large)
-                
-                Button("Button Style Examples"){}
+
+                Button("Button Style Examples") {}
                     .buttonStyle(.borderless)
                     .tint(.mint)
                     .buttonBorderShape(.roundedRectangle(radius: 8))
                     .controlSize(.large)
-                
-                Button("Button Style Examples"){}
+
+                Button("Button Style Examples") {}
                     .buttonStyle(.plain)
                     .tint(.mint)
                     .buttonBorderShape(.roundedRectangle(radius: 8))
                     .controlSize(.large)
-                
-                Button("Button Style Examples"){}
+
+                Button("Button Style Examples") {}
                     .buttonStyle(.automatic)
                     .tint(.mint)
                     .buttonBorderShape(.roundedRectangle(radius: 8))
                     .controlSize(.large)
-                
             }
-            
+
             VStack(spacing: 16) {
                 Button("Button Style Examples") {
                 }
@@ -70,21 +67,21 @@ struct NewButtonStylesAndMaterials: View {
                 .tint(.mint)
                 .buttonBorderShape(.roundedRectangle(radius: 8))
                 .controlSize(.large)
-                
+
                 Button("Button Style Examples") {
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.mint)
                 .buttonBorderShape(.roundedRectangle)
                 .controlSize(.large)
-                
+
                 Button("Button Style Examples") {
                 }
                 .buttonStyle(.borderedProminent)
                 .tint(.mint)
                 .buttonBorderShape(.capsule)
                 .controlSize(.large)
-                
+
                 Button("Button Style Examples") {
                 }
                 .buttonStyle(.borderedProminent)
@@ -92,11 +89,11 @@ struct NewButtonStylesAndMaterials: View {
                 .buttonBorderShape(.automatic)
                 .controlSize(.large)
             }
-            
+
             VStack(spacing: 16) {
                 Text("Button control Size Examples")
                     .bold()
-                
+
                 Button("Button Style Examples") {
                 }
                 .buttonStyle(.borderedProminent)
@@ -122,34 +119,34 @@ struct NewButtonStylesAndMaterials: View {
                 .buttonBorderShape(.roundedRectangle)
                 .controlSize(.large)
             }
-            
+
             VStack(spacing: 24) {
                 Text("Material Examples")
-                
+
                 Button("Material Examples") {
                 }
                 .padding()
                 .background(.ultraThinMaterial)
                 .controlSize(.large)
-                
+
                 Button("Material Examples") {
                 }
                 .padding()
                 .background(.thinMaterial, in: .capsule)
                 .controlSize(.large)
-                
+
                 Button("Material Examples") {
                 }
                 .padding()
                 .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 8))
                 .controlSize(.large)
-                
-                Button("Material Examples") {
+
+                Button("Material Examples1") {
                 }
                 .padding()
                 .background(.thickMaterial, in: RoundedRectangle(cornerRadius: 8))
                 .controlSize(.large)
-                
+
                 Button("Material Examples") {
                 }
                 .padding()
