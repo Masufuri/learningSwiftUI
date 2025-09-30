@@ -9,7 +9,43 @@ import SwiftUI
 
 struct HStackExample: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 0) {
+            Group {
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+                Text("Hello, World!")
+            }
+            .fixedSize()
+//            ForEach(1...20, id: \.self) { item in
+//                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//                    .fixedSize()
+//            }
+        }
     }
 }
 
