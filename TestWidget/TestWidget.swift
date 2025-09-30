@@ -47,12 +47,34 @@ struct TestWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+        GeometryReader { geo in
+                VStack {
+                    Text("Time:")
+                    Text(entry.date, style: .time)
+                    
+                    Text("Emoji:")
+                    Text(entry.emoji)
+                    Button("asdads") {
+                        
+                    }
+                    .buttonStyle(.bordered)
+                }
+//                .padding()
+                .frame(width: geo.size.width, height: geo.size.height)
+//                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+//                .background(.red)
+                
+                .background {
+                    Image(.frame2147225982)
+                        .resizable()
+                        .scaledToFill()
+//                        .padding(-60)
+//                        .frame(width: geo.size.width, height: geo.size.height)
+//                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                }
+            
+            
+            
         }
     }
 }
@@ -73,12 +95,21 @@ struct TestWidget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
+        .contentMarginsDisabled()
     }
 }
 
+@available(iOSApplicationExtension 17.0, *)
 #Preview(as: .systemSmall) {
     TestWidget()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
     SimpleEntry(date: .now, emoji: "🤩")
 }
+
+//struct TestWidget_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TestWidgetEntryView(entry: SimpleEntry(date: Date(), emoji: ""))
+//            .previewContext(WidgetPreviewContext(family: .systemSmall))
+//    }
+//}
