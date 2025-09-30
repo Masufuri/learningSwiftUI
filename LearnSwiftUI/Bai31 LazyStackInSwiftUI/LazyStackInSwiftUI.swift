@@ -9,7 +9,38 @@ import SwiftUI
 
 struct LazyStackInSwiftUI: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.horizontal) {
+            LazyHStack(alignment: .top, spacing: 10, pinnedViews: .sectionFooters) {
+//                ForEach(1...1000000, id: \.self) { item in
+//                    Text("\(item)")
+//                }
+                Section {
+                    ForEach(1...50, id: \.self) { item in
+                        Text("\(item)")
+                    }
+                } footer: {
+                    Text("First Section")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.mint)
+                        .clipped()
+                        
+                }
+                
+                Section {
+                    ForEach(51...100, id: \.self) { item in
+                        Text("\(item)")
+                    }
+                } footer: {
+                    Text("Second Section")
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(.mint)
+                        .clipped()
+                }
+
+            }
+        }
     }
 }
 
