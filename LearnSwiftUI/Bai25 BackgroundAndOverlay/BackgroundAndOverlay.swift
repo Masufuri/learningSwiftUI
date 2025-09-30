@@ -59,6 +59,7 @@ struct BackgroundAndOverlay: View {
                     .background {
                         Circle()
                             .fill(.blue)
+                        
                     }
                     .overlay(alignment: .bottom) {
                         Text("Subscribe")

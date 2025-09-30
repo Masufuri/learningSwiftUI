@@ -38,7 +38,7 @@ struct LearnSwiftUIApp: App {
 //            ArcAnimationView()
 //            LabelLabelStyle()
 
-            // Bai 19
+//             Bai 19
 //            TabView(selection: $router.currentScreen) {
 //                ScreenOne()
 //                    .badge(10)
@@ -61,7 +61,10 @@ struct LearnSwiftUIApp: App {
             
             
             //Bai 26
-            ManageIgnoreAndAddToSafeArea()
+//            ManageIgnoreAndAddToSafeArea()
+            
+            //bai31
+            LazyStackInSwiftUI()
         }
     }
 }
