@@ -20,13 +20,14 @@ struct BackgroundAndOverlay: View {
                     .padding()
                     .font(.footnote.weight(.bold))
                     .background {
+                        Color.yellow
                         Image(systemName: "star")
                             .symbolVariant(.fill)
                             .foregroundColor(.white)
                             .font(.system(size: 32))
                             .offset(y: -2)
                     }
-                    .background(.yellow)
+//                    .background(.yellow)
                 
                 Text("5")
                     .padding()
@@ -85,7 +86,6 @@ struct BackgroundAndOverlay: View {
                             .foregroundStyle(.white)
                             .font(.footnote.weight(.bold))
                             .padding(4)
-//                            .padding(.vertical, 8)
                             .background(.ultraThinMaterial, in: Capsule())
                     }
             }

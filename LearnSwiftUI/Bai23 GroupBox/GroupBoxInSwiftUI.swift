@@ -23,7 +23,6 @@ struct GroupBoxInSwiftUI: View {
                     Image(systemName: "star")
                         .symbolVariant(.fill)
                 }
-
             }
             
             GroupBox {

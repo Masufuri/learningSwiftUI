@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SpacersSwiftUI: View {
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
             HStack {
                 Spacer()
                 Text("Name:")

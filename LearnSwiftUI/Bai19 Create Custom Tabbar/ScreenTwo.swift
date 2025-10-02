@@ -24,7 +24,7 @@ struct ScreenTwo: View {
                 tabBar.currentScreen = .one
             }
             DatePicker(selection: $selectedDate, in: range) {
-                Text("asdasd")
+                Text("DatePicker")
             }
         }
     }

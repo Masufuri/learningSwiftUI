@@ -11,10 +11,10 @@ struct TextInputTest: View {
     var body: some View {
         VStack {
             TextField("Enter text", text: .constant(""))
-            TextField("hello", text: .constant(""), prompt: Text("asdasd"))
+            TextField("hello", text: .constant(""))
             SecureField("PassWord", text: .constant(""))
-                
         }
+        .textFieldStyle(.roundedBorder)
     }
 }
 

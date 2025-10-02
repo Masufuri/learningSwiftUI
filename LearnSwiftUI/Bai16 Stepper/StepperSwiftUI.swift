@@ -42,6 +42,7 @@ struct StepperSwiftUI: View {
                     step: 1) {
                 Text("Burger \(quantityOne)")
             }onEditingChanged: { editingStarted in
+                guard !editingStarted else { return }
                 print("Changed \(quantityOne)")
             }
         }

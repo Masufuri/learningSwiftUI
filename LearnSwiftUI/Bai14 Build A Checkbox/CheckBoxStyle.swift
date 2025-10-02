@@ -19,6 +19,7 @@ struct ToggleCheckBoxStyle: ToggleStyle {
             configuration.isOn.toggle()
         } label: {
             Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+                .font(.title)
         }
         .tint(.black)
     }

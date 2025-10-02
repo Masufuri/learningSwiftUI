@@ -18,15 +18,46 @@ struct TextInput: View {
     @State var user: User = .init()
     
     var body: some View {
-        VStack {
-            userNameTF
-            passwordTF
-            btnSubmit
+        ZStack {
+            Color.blue
+                .edgesIgnoringSafeArea(.all)
+                .onTapGesture {
+                    inputFocus = false
+                }
+            VStack {
+                VStack {
+                    userNameTF
+                    passwordTF
+                    btnSubmit
+                }
+                .padding()
+                .textFieldStyle(.roundedBorder)
+                .autocorrectionDisabled(true)
+//                .textInputAutocapitalization(.never)
+                .autocapitalization(.sentences)
+                
+                
+                .onSubmit(of: .text, submit)
+           
+            Button("Click here") {
+                isPresented.toggle()
+            }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .tint(.orange)
+            .controlSize(.large)
+            //        .sheet(isPresented: $isPresented) {
+            //            AloAlo()
+            //        }
+            
+            AloAlo()
+            
+            AddView(hello: $isPresented)
+            //            .frame(width: .infinity, height: 100)
+            }
+            
+            
         }
-        .padding()
-        .textFieldStyle(.roundedBorder)
-        .autocorrectionDisabled(true)
-        .textInputAutocapitalization(.never)
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()
@@ -35,19 +66,6 @@ struct TextInput: View {
                 }
             }
         }
-        .onSubmit(of: .text, submit)
-        
-        Button("Click here") {
-            isPresented.toggle()
-        }
-//        .sheet(isPresented: $isPresented) {
-//            AloAlo()
-//        }
-        
-        AloAlo()
-        
-        AddView(hello: $isPresented)
-//            .frame(width: .infinity, height: 100)
     }
 }
 
@@ -60,6 +78,7 @@ extension TextInput {
     var userNameTF: some View {
         TextField("Username", text: $user.username)
             .textContentType(.username)
+            .keyboardType(.emailAddress)
             .focused($inputFocus)
     }
     
@@ -67,7 +86,7 @@ extension TextInput {
         SecureField("Password", text: $user.password)
             .textContentType(.password)
             .focused($inputFocus)
-            .submitLabel(.done)
+            .submitLabel(.continue)
     }
     
     var btnSubmit: some View {
@@ -76,6 +95,10 @@ extension TextInput {
         } label: {
             Text("Submit")
         }
+        .padding()
+        .tint(.mint)
+        .buttonBorderShape(.roundedRectangle(radius: 8))
+        .buttonStyle(.borderedProminent)
 
     }
 }

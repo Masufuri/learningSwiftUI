@@ -36,6 +36,8 @@ struct LearnSwiftUIApp: App {
             // Bai 10
 //            LoginManager()
 //            ArcAnimationView()
+            
+            //Bai 12
 //            LabelLabelStyle()
 
 //             Bai 19
@@ -59,12 +61,16 @@ struct LearnSwiftUIApp: App {
             //bai 20
 //            TextInput()
             
-            
-            //Bai 26
+            //bai24
+//            ControlGroupInSwiftUI()
 //            ManageIgnoreAndAddToSafeArea()
             
+            
+            //Bai 26
+            ManageIgnoreAndAddToSafeArea()
+            
             //bai31
-            LazyStackInSwiftUI()
+//            LazyStackInSwiftUI()
         }
     }
 }

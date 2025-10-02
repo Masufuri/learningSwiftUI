@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct LabelLabelStyle: View {
+    @Environment(\.openURL) var openURL
+
     var body: some View {
         VStack {
             Label("Pick a Colour", systemImage: "paintpalette")
             Label("hello", image: "tasbih_ball_1")
+            Button("ádasd") {
+                openURL(URL(string: "maps://")!) {accepted in 
+                    print(accepted)
+                }
+            }
             Link(destination: URL(string: "http://google.com")!) {
+
                 Label {
                     Text("Hello")
                         .padding(.vertical, 10)

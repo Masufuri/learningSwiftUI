@@ -50,18 +50,17 @@ struct BuildACheckbox: View {
             .toggleStyle(.button)
         }
         
-        Group {
-            Toggle("", isOn: $isOn)
-                .labelsHidden()
-                .toggleStyle(ToggleCheckBoxStyle())
-                .font(.title)
-        }
+Group {
+    Toggle("", isOn: $isOn)
+        .labelsHidden()
+        .toggleStyle(ToggleCheckBoxStyle())
+}
         
         Group {
             Toggle(isOn: $isOn) {}
                 .labelsHidden()
                 .toggleStyle(.checkBox)
-                .font(.title)
+//                .font(.title)
                 .animation(nil)
         }
         

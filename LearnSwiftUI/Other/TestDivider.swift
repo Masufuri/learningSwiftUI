@@ -9,15 +9,19 @@ import SwiftUI
 
 struct TestDivider: View {
     var body: some View {
-        HStack {
-            Text("Hello, World!")
-            Divider()
-                .frame(height: 50)
-                .background(.red)
-            Text("What")
+//        ScrollView {
+            HStack {
+                Text("Hello, World!")
+                    .background(.yellow)
+                Divider()
+                Text("What")
+                    .background(.yellow)
+            }
+//            .background(.blue)
+            .padding()
+            //        .background(.red)
         }
-        .padding()
-    }
+//    }
 }
 
 #Preview {
